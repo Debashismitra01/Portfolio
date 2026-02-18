@@ -1,0 +1,5 @@
+.Hero{
+    height: 120vh;
+    overflow: hidden;
+    z-index: 100;
+}
