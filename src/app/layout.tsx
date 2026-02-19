@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wahyuni's Portfolio",
+  title: "Debashis Mitra — Backend & Platform Engineer",
   description:
-    "Hello, my name is Wahyuni ​​Anti. I am a web developer with my expertise in PHP, Javascript, Kotlin & Java technologies",
+    "Backend & Platform Engineer. I build and operate scalable services — Spring Boot, Kafka, Docker, Azure, multi-DB architecture and SDK integrations.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {" "}
-          {children}
+        {children}
       </body>
     </html>
   );

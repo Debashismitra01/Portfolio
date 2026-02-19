@@ -1,0 +1,99 @@
+/* ========== SHARED SECTION DEFAULTS ========== */
+.section-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #7dd3fc;
+    margin-bottom: 0.7rem;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #f8fafc;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+}
+
+/* ========== WHAT I DO ========== */
+.whatido-section {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.whatido-inner {
+    position: relative;
+    max-width: 1100px;
+    z-index: 10;
+    margin: 0 auto;
+    margin: 7rem 10vw;
+    max-height: inherit;
+    
+}
+
+.whatido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.whatido-card {
+    background: rgba(0, 0, 0, 0.768);
+    border: 1px solid rgba(0, 0, 0, 0.855);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.whatido-card:hover {
+    border-color: rgba(125, 211, 252, 0.25);
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.05);
+}
+
+.whatido-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.whatido-card-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.6rem;
+}
+
+.whatido-card-desc {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0 0 1.1rem;
+}
+
+.whatido-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.whatido-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(139, 92, 246, 0.12);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}

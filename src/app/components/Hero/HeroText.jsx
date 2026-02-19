@@ -7,16 +7,18 @@ const HeroText = () => {
   return (
     <>
     <div style={{ width: '100%', height: '100vh',  position: 'absolute' }}>
-      <FloatingLines 
+      <FloatingLines
+    linesGradient={["#4f4f4f","#404040","#c9c9c9"]}
+    animationSpeed={1.1}
+    interactive
+    bendRadius={15.5}
+    bendStrength={-0.5}
+    mouseDamping={0.05}
+    parallax
+    parallaxStrength={0.2}
     enabledWaves={["top","bottom"]}
-    // Array - specify line count per wave; Number - same count for all waves
-    lineCount={14}
-    // Array - specify line distance per wave; Number - same distance for all waves
-    lineDistance={29.5}
-    bendRadius={10}
-    bendStrength={50}
-    interactive={true}
-    parallax={true}
+    lineCount={9}
+    lineDistance={62}
   />
 </div>
     <section className="pb-20 pt-36">

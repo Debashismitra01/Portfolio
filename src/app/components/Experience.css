@@ -1,0 +1,83 @@
+/* ========== EXPERIENCE ========== */
+.exp-section {
+    padding: 7rem 1.5rem;
+    background: #020617;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exp-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.exp-entry {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.exp-role {
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.25rem;
+}
+
+.exp-period {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    color: #475569;
+}
+
+.exp-badge {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.62rem;
+    background: rgba(249, 115, 22, 0.1);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    padding: 4px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.exp-deliverables {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.exp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+}
+
+.exp-bullet {
+    color: #7dd3fc;
+    font-size: 0.65rem;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}

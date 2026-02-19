@@ -11,6 +11,7 @@
   justify-content: center;
   margin: 0 0;
   overflow: hidden;
+  color: white;
 }
 
 /* CONTAINER */
@@ -50,7 +51,7 @@
   font-weight: 700;
   font-style: normal;
   span{
-    background: linear-gradient(90deg, #787afd, #d6c7e6, #ee62bf);
+    background: linear-gradient(90deg, #919191, #cbc7e6, #d4d4d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
