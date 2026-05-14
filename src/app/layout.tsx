@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Debashis Mitra — Backend & Platform Engineer",
+  title: "Debashis Mitra - Backend & Platform Engineer",
   description:
-    "Backend & Platform Engineer. I build and operate scalable services — Spring Boot, Kafka, Docker, Azure, multi-DB architecture and SDK integrations.",
+    "Backend & Platform Engineer. I build and operate scalable services with Spring Boot, Kafka, Docker, Azure, multi-DB architecture and SDK integrations.",
 };
 
 export default function RootLayout({
@@ -17,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {" "}
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

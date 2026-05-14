@@ -1,7 +1,7 @@
 /* ========== ENGINEERING NOTES ========== */
 .notes-section {
     padding: 7rem 1.5rem;
-    background: #020617;
+    background: #020202;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -83,9 +83,28 @@
 }
 
 .note-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     font-family: "JetBrains Mono", monospace;
     font-size: 0.7rem;
     color: #7dd3fc;
     opacity: 0;
     transition: opacity 0.2s;
+}
+
+@media (max-width: 640px) {
+    .notes-section {
+        padding: 4.5rem 1rem;
+    }
+
+    .note-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .note-item:hover {
+        padding-left: 0;
+    }
 }

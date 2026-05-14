@@ -3,7 +3,7 @@
     padding: 7rem 1.5rem;
     background: #000000;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    height: 100vh;
+    min-height: 100svh;
     overflow: hidden;
     position: relative;
 }
@@ -67,7 +67,6 @@
 
 .arch-row--dbs {
     gap: 0.5rem;
-    padding-left: 1rem;
 }
 
 .arch-box {
@@ -181,6 +180,9 @@
 }
 
 .flagship-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     font-family: "Inter", sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
@@ -198,6 +200,7 @@
 
 .flagship-link--github:hover {
     border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
 }
 
 .flagship-link--live {
@@ -207,6 +210,7 @@
 
 .flagship-link--live:hover {
     background: #38bdf8;
+    transform: translateY(-2px);
 }
 
 .flagship-challenges {
@@ -216,4 +220,44 @@
 .flagship-right {
     position: sticky;
     top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .flagship-section {
+        min-height: auto;
+        padding: 4.5rem 1rem;
+    }
+
+    .flagship-grid {
+        gap: 2rem;
+    }
+
+    .flagship-right {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .flagship-links {
+        flex-direction: column;
+    }
+
+    .flagship-link {
+        justify-content: center;
+    }
+
+    .arch-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .arch-arrow {
+        transform: rotate(90deg);
+        justify-self: center;
+    }
+
+    .arch-row--dbs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }

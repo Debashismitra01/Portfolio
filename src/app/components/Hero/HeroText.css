@@ -1,23 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+.hero-shell {
+  position: relative;
+  min-height: 100svh;
+  padding: 8rem 1.25rem 5rem;
+  display: grid;
+  place-items: center;
+}
 
-/* SECTION */
+.hero-lines-bg {
+  position: absolute;
+  inset: 0;
+  height: 100svh;
+  width: 100%;
+  pointer-events: none;
+}
 
 .hero {
   position: relative;
   z-index: 10;
   display: flex;
   align-items: center;
-  height: 69.5vh;
   justify-content: center;
   margin: 0 0;
   overflow: hidden;
   color: white;
+  min-height: 64svh;
 }
 
 /* CONTAINER */
 
 .hero-container {
-  width: 89vw;
+  width: min(89vw, 760px);
   max-width: 720px;
   display: flex;
   flex-direction: column;
@@ -31,8 +43,8 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
-  color: #dbeafe; /* Tailwind blue-100 */
-  max-width: 20rem;
+  color: #7dd3fc;
+  max-width: 36rem;
 }
 
 /* TITLE */
@@ -42,9 +54,9 @@
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 7vw, 3rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.06;
   text-transform: capitalize;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -63,9 +75,9 @@
 
 .hero-description {
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.6;
-  color: #dbeafe;
+  color: #94a3b8;
   max-width: 650px;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -75,7 +87,70 @@
 
 /* BUTTON */
 
-.hero-button {
+.hero-actions {
   margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.hero-button,
+.hero-button > * {
   text-decoration: none;
+}
+
+.hero-button button,
+.hero-button div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-social {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-social:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 211, 252, 0.35);
+  background: rgba(125, 211, 252, 0.08);
+}
+
+@media (max-width: 680px) {
+  .hero-shell {
+    min-height: auto;
+    padding: 7rem 1rem 4rem;
+  }
+
+  .hero {
+    min-height: 58svh;
+  }
+
+  .hero-intro {
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+  }
+
+  .hero-title-wrapper {
+    margin: 1rem 0;
+  }
+
+  .hero-title {
+    line-height: 1.12;
+  }
+
+  .hero-description {
+    max-width: 34rem;
+  }
 }

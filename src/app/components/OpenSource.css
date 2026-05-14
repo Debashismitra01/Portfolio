@@ -2,8 +2,9 @@
 .oss-section {
     background: #00000063;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    height: 100vh;
+    min-height: 100svh;
     position: relative;
+    overflow: hidden;
 }
 
 .oss-inner {
@@ -11,8 +12,13 @@
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
-    height: 100vh;
     z-index: 20;
+}
+
+.oss-bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
 }
 
 .oss-stats {
@@ -28,9 +34,15 @@
     min-width: 100px;
     background: rgba(0, 0, 0, 0.756);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.oss-stat:hover {
+    transform: translateY(-3px);
+    border-color: rgba(125, 211, 252, 0.18);
 }
 
 .oss-stat-value {
@@ -61,18 +73,20 @@
 .oss-card {
     background: rgba(0, 0, 0, 0.79);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 1.75rem;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, transform 0.2s ease, background 0.2s ease;
 }
 
 .oss-card:hover {
     border-color: rgba(125, 211, 252, 0.2);
+    background: rgba(0, 0, 0, 0.88);
+    transform: translateY(-3px);
 }
 
 .oss-card-icon {
-    font-size: 1.5rem;
     margin-bottom: 0.75rem;
+    color: #7dd3fc;
 }
 
 .oss-card-title {
@@ -89,4 +103,30 @@
     color: #64748b;
     line-height: 1.7;
     margin: 0;
+}
+
+@media (max-width: 760px) {
+    .oss-section {
+        min-height: auto;
+    }
+
+    .oss-inner {
+        padding: 4.5rem 1rem;
+    }
+
+    .oss-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .oss-stat {
+        min-width: 0;
+        padding: 1rem;
+    }
+
+    .oss-stat-value {
+        font-size: 1.55rem;
+    }
 }

@@ -9,15 +9,16 @@ import Experience from "./components/Experience";
 import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
 import "./home.css";
-import FloatingLines from "./components/Hero/FloatingLines";
 
 export default function Home() {
   return (
     <main className="page">
       <PillNav
-        logo="./vercel.svg"
+        logo={null}
+        logoText="DM"
         logoAlt="Debashis Mitra"
         items={[
+          { label: "Home", href: "#home" },
           { label: "Work", href: "#upblit" },
           { label: "Writing", href: "#writing" },
           { label: "Stack", href: "#stack" },
@@ -25,13 +26,6 @@ export default function Home() {
         ]}
         activeHref="/"
         className="custom-nav"
-        ease="power2.easeOut"
-        baseColor="#000000"
-        pillColor="#ffffff"
-        hoveredPillTextColor="#ffffff"
-        pillTextColor="#000000"
-        theme="light"
-        initialLoadAnimation={false}
       />
       <div className="page-container">
         {/* 1. Hero */}
@@ -46,11 +40,17 @@ export default function Home() {
         {/* 4. Other Systems */}
         <OtherSystems />
 
-        {/* 5. Engineering Notes 
-        <EngineeringNotes />*/}
+        {/* 5. Experience */}
+        <Experience />
 
-        {/* 6. Open Source */}
+        {/* 6. Engineering Notes */}
+        <EngineeringNotes />
+
+        {/* 7. Open Source */}
         <OpenSource />
+
+        {/* 8. Stack */}
+        <TechStack />
 
         {/* 9. Contact */}
         <Contact />
