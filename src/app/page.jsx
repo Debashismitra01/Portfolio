@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="page">
       <PillNav
-        logo={null}
+        logo={"/logo.jpg"}
         logoText="DM"
         logoAlt="Debashis Mitra"
         items={[
