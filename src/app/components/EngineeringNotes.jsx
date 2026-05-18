@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 import "./EngineeringNotes.css";
+import { HoverBorderGradient } from "./Hero/hover-border-gradient";
 
 const notes = [
   {
@@ -61,6 +62,11 @@ export default function EngineeringNotes() {
             </Reveal>
           ))}
         </div>
+        <a href="https://blog.debashismitra.me" className="hero-button" target="_blank" rel="noopener noreferrer">
+                    <HoverBorderGradient as="span">
+                      Read More Notes <ArrowRight size={15} aria-hidden="true" />
+                    </HoverBorderGradient>
+                  </a>
       </div>
     </section>
   );
