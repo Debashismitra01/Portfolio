@@ -151,7 +151,7 @@ export default function Flagship() {
 
             <div className="flagship-links">
               <a
-                href="https://github.com/Debashismitra01/upblit"
+                href="https://github.com/upblit/upblit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flagship-link flagship-link--github"
