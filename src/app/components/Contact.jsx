@@ -8,8 +8,8 @@ const links = [
   {
     icon: Mail,
     label: "Email",
-    value: "mdebashis268@gmail.com",
-    href: "mailto:mdebashis268@gmail.com",
+    value: "hello@debashismitra.me",
+    href: "mailto:hello@debashismitra.me",
   },
   {
     icon: Linkedin,
