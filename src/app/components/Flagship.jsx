@@ -8,35 +8,36 @@ import "./Flagship.css";
 
 const challenges = [
   {
-    title: "Auth & API Key Security",
-    desc: "Designed user-facing OAuth2/JWT sessions plus API key issuance for programmatic access, each with scoped permissions.",
+    title: "Multi-Tenant Isolation",
+    desc: "Scoped every query, queue, and metric by tenant_id across six microservices, so one shared Postgres instance safely serves many organizations.",
   },
   {
-    title: "Multi-DB Architecture",
-    desc: "Separated transactional data, document storage, cache, and events so each store matches the access pattern.",
+    title: "Fault-Tolerant Ingestion",
+    desc: "Built a Kafka pipeline with dead-letter queues, retries, and circuit breakers — verified recovery across consumer crashes, DB outages, and downstream failures under load.",
   },
   {
-    title: "Production Deployment & SSL",
-    desc: "Deployed on Azure VM with Docker, Nginx reverse proxy, and Let's Encrypt SSL with a zero-downtime rollout approach.",
+    title: "Secrets Separation",
+    desc: "Split client-facing credentials (custom Lua-based Secrets Manager) from internal infra secrets (HashiCorp Vault) — a deliberate boundary between product and ops concerns.",
   },
   {
-    title: "Token-Based Communication",
-    desc: "Implemented inter-service token relay so downstream services authenticate requests without exposing primary credentials.",
+    title: "Multi-Cloud Production Deployment",
+    desc: "Shipped eight services (frontend, backend, pinger, ingestor + Codily's frontend, API, worker) across GCP, AWS, Azure, and Cloudflare with Docker and Nginx.",
   },
 ];
 
 const tech = [
   "Java",
   "Spring Boot",
+  "Go",
+  "Apache Kafka",
+  "Redis",
   "PostgreSQL",
   "MongoDB",
-  "Redis",
-  "Kafka",
+  "HashiCorp Vault",
   "Docker",
-  "Azure VM",
+  "Kubernetes",
   "Nginx",
-  "JWT",
-  "OAuth2",
+  "GCP / AWS / Azure",
 ];
 
 export default function Flagship() {
@@ -71,18 +72,22 @@ export default function Flagship() {
             <Reveal className="flagship-block" delay={100}>
               <h3 className="flagship-block-title">Problem</h3>
               <p className="flagship-block-text">
-                Existing monitoring tools were either too expensive or too generic for small
-                product teams. Upblit gives teams a lightweight, self-hosted way to track
-                uptime, send alerts, and publish status pages.
+                Development teams end up stitching together separate tools for
+                observability and secrets management, each with its own auth model,
+                its own dashboard, and no shared context. Upblit unifies both into
+                one multi-tenant platform with a single source of truth.
               </p>
             </Reveal>
 
             <Reveal className="flagship-block" delay={150}>
               <h3 className="flagship-block-title">What it does</h3>
               <p className="flagship-block-text">
-                Teams register services, configure check intervals, and get a public status
-                page automatically. When something goes down, alerts fire; when it recovers,
-                the incident is logged. The system is API-first.
+                Teams instrument applications with lightweight SDKs (Express, Python,
+                Java, Go) that stream logs, telemetry, and traces into a Kafka
+                ingestion pipeline, scoped by tenant, project, organisation, and
+                application. The same platform manages client-facing secrets through
+                a purpose-built Lua-based manager, while internal infrastructure
+                credentials stay isolated in HashiCorp Vault.
               </p>
             </Reveal>
 
@@ -90,11 +95,11 @@ export default function Flagship() {
               <h3 className="flagship-block-title">Architecture</h3>
               <div className="arch-diagram">
                 <div className="arch-row">
-                  <div className="arch-box arch-client">Client / SDK</div>
+                  <div className="arch-box arch-client">SDKs (Go, Java, Python, Express)</div>
                   <div className="arch-arrow">-&gt;</div>
                   <div className="arch-box arch-gateway">
-                    API Gateway
-                    <span>Nginx + SSL</span>
+                    Ingestor
+                    <span>Go + Kafka</span>
                   </div>
                   <div className="arch-arrow">-&gt;</div>
                   <div className="arch-box arch-service">
@@ -105,19 +110,19 @@ export default function Flagship() {
                 <div className="arch-row arch-row--dbs">
                   <div className="arch-box arch-db">
                     PostgreSQL
-                    <span>Transactions</span>
+                    <span>Tenants / Core</span>
                   </div>
                   <div className="arch-box arch-db">
                     MongoDB
-                    <span>Docs / Logs</span>
+                    <span>Logs / Traces</span>
                   </div>
                   <div className="arch-box arch-db">
                     Redis
-                    <span>Cache / Queue</span>
+                    <span>Cache / Pub-Sub</span>
                   </div>
                   <div className="arch-box arch-db">
-                    Kafka
-                    <span>Events</span>
+                    Vault + Lua SM
+                    <span>Secrets</span>
                   </div>
                 </div>
               </div>
@@ -151,7 +156,7 @@ export default function Flagship() {
 
             <div className="flagship-links">
               <a
-                href="https://github.com/upblit/upblit"
+                href="https://github.com/Upblit/Upblit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flagship-link flagship-link--github"

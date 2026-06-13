@@ -6,23 +6,21 @@ import "./OtherSystems.css";
 
 const systems = [
   {
-    name: "AutoRAG",
-    label: "Business Chatbot Automation",
-    desc: "Automated customer-facing chatbot pipelines for businesses using retrieval-augmented generation over proprietary documents without vendor lock-in.",
-    challenge:
-      "The hard part: chunking documents intelligently so context windows stayed useful and latency stayed low under concurrent queries.",
-    tags: ["RAG", "Python", "Vector DB", "LLM"],
-    github: "https://github.com/Debashismitra01/AutoRAG",
-  },
-  {
-    name: "AlgoNest",
-    label: "Competitive Programming Platform",
-    desc: "A LeetCode-like platform where users solve algorithmic problems, track personal progress, and review solution histories across sessions.",
-    challenge:
-      "The hard part: sandboxed code execution in isolated containers with time and memory limits enforced at the OS level.",
-    tags: ["Spring Boot", "Docker", "PostgreSQL", "Java"],
-    github: "https://github.com/Debashismitra01/AlgoNest",
-  },
+  name: "Codily",
+  label: "High-Performance Async Job Relay",
+  desc: "A multitenant distributed job processing platform built with Go, PostgreSQL, and Redis, featuring priority queues, retries with exponential backoff, scheduling, webhooks, RBAC, and an operations dashboard.",
+  challenge:
+    "The hardest part was designing a fault-tolerant worker architecture with reliable retries, delayed scheduling, tenant isolation, and low-latency job dispatch while maintaining consistency between PostgreSQL and Redis.",
+  tags: [
+    "Go",
+    "PostgreSQL",
+    "Redis",
+    "Distributed Systems",
+    "Worker Queues",
+    "RBAC"
+  ],
+  github: "https://github.com/Debashismitra01/Codily",
+}
 ];
 
 export default function OtherSystems() {

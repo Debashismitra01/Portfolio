@@ -7,25 +7,25 @@ import { HoverBorderGradient } from "./Hero/hover-border-gradient";
 
 const notes = [
   {
-    date: "Jan 2025",
-    title: "Why my first caching strategy failed",
-    desc: "I cached at the wrong layer. Data was stale in Redis while the DB had the truth, and that changed how I think about invalidation.",
-    tag: "Redis / Caching",
-    href: "#",
+    date: "May 28, 2026",
+    title: "Codily's Redis ZSET Delayed Queue",
+    desc: "How I built delayed job scheduling using Redis Sorted Sets, Unix epoch nanosecond scores, and a scheduler goroutine that atomically promotes ready jobs with exponential backoff support.",
+    tag: "Redis / Go / Distributed Systems",
+    href: "https://blog.debashismitra.me/posts/codily-redis-zset-delayed-queue-deep-dive",
   },
   {
-    date: "Dec 2024",
-    title: "Designing token authentication for Upblit's API",
-    desc: "A walkthrough of a dual-token system: short-lived JWTs for sessions and long-lived API keys for SDK consumers with scoped permissions.",
-    tag: "Auth / JWT / Security",
-    href: "#",
+    date: "May 11, 2026",
+    title: "What I Learned Deploying 8 Services Across GCP, AWS, Azure, and Cloudflare",
+    desc: "An honest reflection on deploying Upblit and Codily across multiple cloud providers, covering networking challenges, secrets management, infrastructure costs, and operational lessons learned as a solo developer.",
+    tag: "DevOps / Multi-Cloud",
+    href: "https://blog.debashismitra.me/posts/what-i-learned-deploying-8-services-across-gcp-aws-azure-cloudflare",
   },
   {
-    date: "Nov 2024",
-    title: "Deploying Spring Boot with Nginx and SSL on Azure",
-    desc: "From a raw VM to production service: reverse proxy config, Let's Encrypt renewal, and a zero-downtime restart strategy.",
-    tag: "DevOps / Azure / Nginx",
-    href: "#",
+    date: "May 21, 2026",
+    title: "Idempotency Keys in Distributed Job Systems",
+    desc: "Why async systems need idempotency, how Codily deduplicates requests with the Idempotency-Key header, and how this prevents duplicate emails, webhooks, and background jobs.",
+    tag: "Backend / APIs / Reliability",
+    href: "https://blog.debashismitra.me/posts/idempotency-keys-distributed-job-systems-codily",
   },
 ];
 

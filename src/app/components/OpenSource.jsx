@@ -7,22 +7,22 @@ import Reveal from "./Reveal";
 import "./OpenSource.css";
 
 const stats = [
-  { value: "11k+", label: "Users" },
-  { value: "40+", label: "Contributors" },
-  { value: "120+", label: "Forks" },
-  { value: "60+", label: "Issues Resolved" },
+  { value: "1k+", label: "Users" },
+  { value: "3k+", label: "Overall Contributions" },
+  { value: "78", label: "Commits" },
+  { value: "23", label: "Contributors" },
 ];
 
 const cards = [
   {
     icon: GitPullRequest,
-    title: "Hacktoberfest Contributor & Maintainer",
+    title: "Hacktoberfest  Maintainer",
     desc: "Reviewed pull requests, triaged issues, mentored first-time contributors, and kept community submissions production-minded.",
   },
   {
     icon: Users,
     title: "Community Building",
-    desc: "Grew a project to 11k users organically with contributor onboarding, clear guidelines, and steady issue triage.",
+    desc: "Grew a project to 1k users organically with contributor onboarding, clear guidelines, and steady issue triage.",
   },
   {
     icon: PenLine,
